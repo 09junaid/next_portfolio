@@ -5,20 +5,27 @@ import { motion } from "framer-motion";
 const service = [
   {
     num: "01",
+    title: "Web Designing",
+    href: "/services/designing",
+    description:
+      "Designing and creating visually appealing and user-friendly interfaces for websites and web applications.",
+  },
+  {
+    num: "02",
     title: "Front-end Development",
     href: "/services/frontend",
     description:
       "Creating beautiful, responsive, and interactive user interfaces using modern web technologies like HTML, CSS, JavaScript, and React.",
   },
   {
-    num: "02",
+    num: "03",
     title: "Backend Development",
     href: "/services/backend",
     description:
       "Building robust server-side solutions with scalable architecture, secure APIs, and database systems using Node.js and Python.",
   },
   {
-    num: "03",
+    num: "04",
     title: "Full Stack Development",
     href: "/services/fullstack",
     description:

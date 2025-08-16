@@ -13,7 +13,7 @@ export default function Nav() {
           key={index} 
           href={link.path} 
           className={`${
-            pathname===link.path 
+            pathname === link.path || (link.path !== '/' && pathname.startsWith(link.path))
               ? 'text-accent' 
               : 'text-white/80 hover:text-accent'
           } capitalize text-sm sm:text-base font-medium transition-all duration-300 relative group`}
@@ -21,7 +21,7 @@ export default function Nav() {
           {link.name}
           {/* Border line - only show one at a time */}
           <span className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 ${
-            pathname === link.path 
+            pathname === link.path || (link.path !== '/' && pathname.startsWith(link.path))
               ? 'w-full' // Active state - full width
               : 'w-0 group-hover:w-full' // Hover state - animate from 0 to full
           }`}></span>

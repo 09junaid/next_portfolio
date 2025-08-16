@@ -29,7 +29,7 @@ export default function MobileNav() {
               href={link.path}
               key={index}
               className={`${
-                pathname === link.path 
+                pathname === link.path || (link.path !== '/' && pathname.startsWith(link.path))
                   ? "text-accent border-b-2 border-accent" 
                   : "text-white/80 hover:text-accent"
               } capitalize text-lg sm:text-xl font-medium transition-all duration-300 hover:scale-105`}
