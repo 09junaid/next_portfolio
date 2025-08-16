@@ -55,7 +55,7 @@ export const experience={
   items:[
     {
       company:"Meissasoft pvt. ltd.",
-      position:"Full Stack Developer",
+      position:"Full Stack Web Developer",
       duration:"2025 - Present",
     },
     {

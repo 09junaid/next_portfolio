@@ -39,84 +39,6 @@ import { VscVscode } from "react-icons/vsc";
 
 // Simple service data configuration
 const serviceConfig = {
-  designing : {
-    title: "Web Designing | UI/UX",
-    description:
-      "Designing and creating visually appealing and user-friendly interfaces for websites and web applications.",
-    technologies: [
-      {
-        category: "Core Technologies",
-        technologies: [
-          {
-            name: "HTML5",
-            icon: <FaHtml5 />,
-            description: "Semantic markup and structure",
-          },
-          {
-            name: "CSS3",
-            icon: <FaCss3 />,
-            description: "Styling and animations",
-          },
-          {
-            name: "JavaScript",
-            icon: <FaJs />,
-            description: "Dynamic functionality",
-          },
-          {
-            name: "TypeScript",
-            icon: <SiTypescript />,
-            description: "Static typing",
-          },
-        ],
-      },
-      {
-        category: "Frameworks & Libraries",
-        technologies: [
-          {
-            name: "React",
-            icon: <FaReact />,
-            description: "Component-based UI library",
-          },
-          {
-            name: "Next.js",
-            icon: <RiNextjsFill />,
-            description: "Full-stack React framework",
-          },
-        ],
-      },
-      {
-        category: "Styling & UI Tools",
-        technologies: [
-          {
-            name: "Bootstrap",
-            icon: <FaBootstrap />,
-            description: "Responsive UI components",
-          },
-          {
-            name: "Tailwind CSS",
-            icon: <SiTailwindcss />,
-            description: "Utility-first CSS framework",
-          },
-          {
-            name: "MUI",
-            icon: <SiMui />,
-            description: "Material-UI component library",
-          },
-          {
-            name: "Shadcn UI",
-            icon: <SiShadcnui />,
-            description: "UI component library",
-          },
-        ],
-      },
-    ],
-    deliverables: [
-      "Responsive web applications",
-      "Modern UI/UX design",
-      "Performance optimization",
-      "Cross-browser compatibility",
-    ],
-  },
   frontend: {
     title: "Front-end Development",
     description:
@@ -393,8 +315,6 @@ export default function ServicePage() {
   const params = useParams();
   const serviceSlug = params.service;
   const serviceData = serviceConfig[serviceSlug];
-
-  // If service doesn't exist, show 404
   if (!serviceData) {
     return (
       <div className="min-h-[80vh] section-padding flex items-center justify-center">

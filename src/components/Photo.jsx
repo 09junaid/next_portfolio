@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import profilePic from "../../public/assets/profile-pic.png";
+import profilePic from "../../public/assets/picofme.png";
 
 export default function Photo() {
   return (
