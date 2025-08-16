@@ -1,9 +1,20 @@
+"use client";
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+
 export default function Home() {
+  const handleResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/assets/pdf/Junaid_Arshad_resume.pdf';
+    link.download = 'Junaid_Arshad_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="h-full">
       <div className="container mx-auto">
@@ -21,6 +32,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
+                onClick={handleResumeDownload}
                 variant={"outline"}
                 size={"lg"}
                 className="uppercase flex items-center gap-2"
