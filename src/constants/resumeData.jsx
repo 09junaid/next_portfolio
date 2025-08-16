@@ -59,13 +59,13 @@ export const experience={
       duration:"2025 - Present",
     },
     {
-      company:"IIFA Technologies pvt. ltd.",
-      position:"MERN Stack Developer Intern",
+      company:"IIFA Tech pvt. ltd.",
+      position:"MERN Stack Developer (Intern)",
       duration:"2024 - 2025",
     },
     {
       company:"Asian Solutions pvt. ltd.",
-      position:"Front-End Developer Intern",
+      position:"Front-End Developer (Intern)",
       duration:"2023 - 2024",
     },
   ]

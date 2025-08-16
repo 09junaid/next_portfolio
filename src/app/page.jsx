@@ -16,45 +16,59 @@ export default function Home() {
   };
 
   return (
-    <section className="h-full">
+    <section className="min-h-screen flex flex-col justify-center">
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
-            <h1 className="h1">
-              Hello I'm
-              <br /> <span className="text-accent">Junaid Arshad</span>{" "}
-            </h1>
-            <p className="max-w-[500px] mb-9 text-white/80 text-justify">
-              I'm a software developer with a passion for creating innovative
-              solutions. I specialize in web development, mobile app
-              development, and UI/UX design.
-            </p>
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 xl:gap-16 section-padding">
+          {/* Content Section */}
+          <div className="text-center lg:text-left order-2 lg:order-none w-full space-y-6 md:space-y-8">
+            <div className="space-y-4 md:space-y-6">
+              <span className="text-lg sm:text-xl md:text-2xl text-accent font-medium">
+                Software Developer
+              </span>
+              <h1 className="h1">
+                Hello I'm
+                <br /> 
+                <span className="text-accent">Junaid Arshad</span>
+              </h1>
+              <p className="max-w-[500px] mx-auto lg:mx-0 text-white/80 text-justify lg:text-left text-sm sm:text-base md:text-lg leading-relaxed">
+                I'm a software developer with a passion for creating innovative
+                solutions. I specialize in web development, mobile app
+                development, and UI/UX design.
+              </p>
+            </div>
+            
+            {/* Action Buttons and Social */}
+            <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8">
               <Button
                 onClick={handleResumeDownload}
                 variant={"outline"}
                 size={"lg"}
-                className="uppercase flex items-center gap-2"
+                className="btn-responsive uppercase flex items-center gap-2 border-accent text-accent hover:bg-accent hover:text-primary transition-all duration-300"
               >
                 <span>Download CV</span>
-                <FiDownload className="text-xl" />
+                <FiDownload className="text-lg sm:text-xl" />
               </Button>
 
-              <div className="mb-8 xl:mb-0">
+              <div className="w-full sm:w-auto">
                 <Social
-                  containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                  containerStyles="flex gap-4 md:gap-6 justify-center lg:justify-start"
+                  iconStyles="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-accent rounded-full flex justify-center items-center text-accent text-sm sm:text-base hover:bg-accent hover:text-primary hover:scale-110 transition-all duration-300"
                 />
               </div>
             </div>
           </div>
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+          
+          {/* Photo Section */}
+          <div className="order-1 lg:order-none w-full lg:w-1/2 flex justify-center lg:justify-end">
             <Photo />
           </div>
         </div>
       </div>
-      <Stats/>
+      
+      {/* Stats Section */}
+      <div className="mt-8 lg:mt-16">
+        <Stats/>
+      </div>
     </section>
   );
 }

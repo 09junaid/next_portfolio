@@ -28,7 +28,18 @@ export default function Social({containerStyles,iconStyles}) {
   return (
     <div className={containerStyles}>
       {socials.map((item,index)=>(
-        <Link key={index} href={item.path} className={iconStyles}>{item.icon}</Link>
+        <Link 
+          key={index} 
+          href={item.path} 
+          className={`${iconStyles} group`}
+          aria-label={item.label}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="group-hover:scale-110 transition-transform duration-300">
+            {item.icon}
+          </span>
+        </Link>
       ))}
     </div>
   )

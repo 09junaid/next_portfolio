@@ -20,16 +20,23 @@ const stats=[
 ]
 export default function Stats() {
   return (
-    <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
-    <div className="container mx-auto">
-      <div className="flex flex-wrap gap-6 max-w-[100vw] mx-auto xl:mx-w-none">
-      {stats.map((item,index)=>(
-        <div key={index} className="flex-1 flex gap-4 items-center xl:justify-start">
-          <CountUp end={item.num} duration={5} delay={2} className="text-4xl xl:text-6xl font-extrabold"/>
-          <p className={`${item.text.length<15?"max-w-[100px]":"max-w-[150px]"} leading-sung text-white/80`}>{item.text}</p>
+    <section className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-white/5 backdrop-blur-sm">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+          {stats.map((item,index)=>(
+            <div key={index} className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center text-center sm:text-left p-4 sm:p-6 rounded-lg hover:bg-white/5 transition-all duration-300">
+              <CountUp 
+                end={item.num} 
+                duration={5} 
+                delay={2} 
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-accent"
+              />
+              <p className="text-xs sm:text-sm md:text-base text-white/80 leading-tight max-w-[120px] sm:max-w-[150px]">
+                {item.text}
+              </p>
+            </div>
+          ))}
         </div>
-      ))}
-      </div>
       </div>
     </section>
   )
