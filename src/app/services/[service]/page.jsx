@@ -12,7 +12,6 @@ import {
   FaNodeJs,
   FaDatabase,
   FaServer,
-  FaCode,
   FaPython,
   FaGithub,
 } from "react-icons/fa";
@@ -70,21 +69,6 @@ const serviceConfig = {
         ],
       },
       {
-        category: "Frameworks & Libraries",
-        technologies: [
-          {
-            name: "React",
-            icon: <FaReact />,
-            description: "Component-based UI library",
-          },
-          {
-            name: "Next.js",
-            icon: <RiNextjsFill />,
-            description: "Full-stack React framework",
-          },
-        ],
-      },
-      {
         category: "Styling & UI Tools",
         technologies: [
           {
@@ -109,6 +93,22 @@ const serviceConfig = {
           },
         ],
       },
+      {
+        category: "Frameworks & Libraries",
+        technologies: [
+          {
+            name: "React",
+            icon: <FaReact />,
+            description: "Component-based UI library",
+          },
+          {
+            name: "Next.js",
+            icon: <RiNextjsFill />,
+            description: "Full-stack React framework",
+          },
+        ],
+      },
+      
     ],
     deliverables: [
       "Responsive web applications",

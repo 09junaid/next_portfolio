@@ -63,7 +63,7 @@ export default function Work() {
             
             {/* Action Buttons */}
             <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
-              <Link href={project.live}>
+              <Link href={project.live} target="_blank">
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
                     <TooltipTrigger className="w-12 h-12 sm:w-16 sm:h-16 md:w-[70px] md:h-[70px] rounded-full bg-white/5 flex justify-center items-center group cursor-pointer hover:bg-white/10 transition-all duration-300">

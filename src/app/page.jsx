@@ -7,9 +7,9 @@ import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
   const handleResumeDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/assets/pdf/Junaid_Arshad_resume.pdf';
-    link.download = 'Junaid_Arshad_Resume.pdf';
+    const link = document.createElement("a");
+    link.href = "/assets/pdf/Junaid_Arshad_resume.pdf";
+    link.download = "Junaid_Arshad_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -27,16 +27,14 @@ export default function Home() {
               </span>
               <h1 className="h1">
                 Hello I'm
-                <br /> 
+                <br />
                 <span className="text-accent">Junaid Arshad</span>
               </h1>
               <p className="max-w-[500px] mx-auto lg:mx-0 text-white/80 text-justify lg:text-left text-sm sm:text-base md:text-lg leading-relaxed">
-                I'm a software developer with a passion for creating innovative
-                solutions. I specialize in web development, mobile app
-                development, and UI/UX design.
+               Full Stack Web Developer with 2 years of experience, specializing in MERN stack to build responsive, efficient, and user-friendly applications.
               </p>
             </div>
-            
+
             {/* Action Buttons and Social */}
             <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8">
               <Button
@@ -57,17 +55,17 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
+
           {/* Photo Section */}
           <div className="order-1 lg:order-none w-full lg:w-1/2 flex justify-center lg:justify-end">
             <Photo />
           </div>
         </div>
       </div>
-      
+
       {/* Stats Section */}
       <div className="mt-8 lg:mt-16">
-        <Stats/>
+        <Stats />
       </div>
     </section>
   );

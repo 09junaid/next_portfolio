@@ -1,6 +1,7 @@
-import { FaHtml5,FaCss3,FaBootstrap,FaJs,FaReact,FaNodeJs, } from "react-icons/fa";
+import { FaHtml5, FaCss3, FaBootstrap, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
+import { SiTailwindcss, SiMui, SiShadcnui, SiTypescript, SiNextdotjs, SiExpress, SiNestjs, SiPostgresql,SiMongodb } from "react-icons/si";
+
 import {FaPhoneAlt,FaEnvelope,FaMapMarkerAlt} from "react-icons/fa"
-import {SiTailwindcss,SiNextdotjs,} from "react-icons/si";
 import badge from "../../public/assets/resume/badge.svg";
 import cap from "../../public/assets/resume/cap.svg";
 import thumb1 from "../../public/assets/work/thumb1.png";
@@ -10,7 +11,7 @@ import thumb3 from "../../public/assets/work/thumb3.png";
 // about data in resume
 export const about={
   title:"About me",
-  description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+  description:"I am a passionate Full Stack Web Developer with 2 years of hands-on experience in creating modern, responsive, and user-friendly web applications. Skilled in MERN stack and eager to deliver innovative digital solutions that make an impact.",
   info:[
     {
     fieldName:"Name",
@@ -51,7 +52,7 @@ export const about={
 export const experience={
   icon:badge,
   title:"My Experience",
-  description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+  description:"Hands-on experience in building scalable web applications, from crafting responsive UIs to developing full-stack solutions. I have worked across different roles, gaining expertise in front-end, back-end, and modern frameworks.",
   items:[
     {
       company:"Meissasoft pvt. ltd.",
@@ -75,7 +76,7 @@ export const experience={
 export const education={
   icon:cap,
   title:"My Education",
-  description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+  description:"A strong academic foundation in Computer Science and Software Engineering, equipping me with technical expertise and problem-solving skills to build modern digital solutions.",
   items:[
     {
       institute:"Minhaj University Lahore",
@@ -96,51 +97,81 @@ export const education={
 }
 
 // education data in resume
-export const skills={
- title:"My Skills",
-  description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-  skillLists:[
+export const skills = {
+  title: "My Skills",
+  description:
+    "Skilled in creating modern, responsive, and scalable web applications using the latest frontend and backend technologies.",
+  skillLists: [
     {
-      icon:<FaHtml5 />,
-      name:"HTML",
+      icon: <FaHtml5 />,
+      name: "HTML",
     },
     {
-      icon:<FaCss3 />,
-      name:"CSS",
+      icon: <FaCss3 />,
+      name: "CSS",
     },
     {
-      icon:<FaBootstrap />,
-      name:"Bootstrap",
+      icon: <FaBootstrap />,
+      name: "Bootstrap",
     },
     {
-      icon:<FaJs />,
-      name:"Javascript",
+      icon: <SiTailwindcss />,
+      name: "Tailwind CSS",
     },
     {
-      icon:<FaReact />,
-      name:"React",
+      icon: <SiMui />,
+      name: "Material UI",
     },
     {
-      icon:<FaNodeJs />,
-      name:"NodeJs",
+      icon: <SiShadcnui />,
+      name: "ShadCN",
     },
     {
-      icon:<SiTailwindcss />,
-      name:"Tailwind",
+      icon: <FaJs />,
+      name: "JavaScript",
     },
     {
-      icon:<SiNextdotjs />,
-      name:"NextJs",
+      icon: <SiTypescript />,
+      name: "TypeScript",
     },
-  ]
-}
+    {
+      icon: <FaReact />,
+      name: "React",
+    },
+    {
+      icon: <SiNextdotjs />,
+      name: "Next.js",
+    },
+    {
+      icon: <FaNodeJs />,
+      name: "Node.js",
+    },
+    {
+      icon: <SiExpress />,
+      name: "Express.js",
+    },
+    {
+      icon: <SiNestjs />,
+      name: "Nest.js",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "MongoDB",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "PostgreSQL",
+    },
+  ],
+};
+
 
 export const projectData=[
   {
     num:'01',
     category:'Forntend Development',
     title:'project 1',
-    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+    description:'This project demonstrates my proficiency in handling media streams, developing scalable front-end structures, and working with third-party SDKs.',
     stack:[
       {
         name:'HTML 5',
@@ -150,32 +181,41 @@ export const projectData=[
       },
       {
         name:'JavaScrip',
+      },
+      {
+        name:'React',
+      },
+      {
+        name:'Zego-Cloud',
       },
 
     ],
     image:thumb1,
-    live:'',
+    live:'https://novatalk.netlify.app/',
     github:'',
   },
   {
     num:'02',
-    category:'Web Development',
-    title:'project 1',
-    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+    category:'MERN Stack Development',
+    title:'project 2',
+    description:'Developed a complete full-stack eCommerce web application using the MERN Stack (MongoDB, Express.js, React, Node.js) with Stripe payment integration and JWT-based authentication. ',
     stack:[
       {
-        name:'HTML 5',
+        name:'MongoDB',
       },
       {
-        name:'CSS 3',
+        name:'Express.js',
       },
       {
-        name:'JavaScrip',
+        name:'React',
+      },
+      {
+        name:'Node.js',
       },
 
     ],
     image:thumb2,
-    live:'',
+    live:'https://hypehive.vercel.app/',
     github:'',
   },
   {

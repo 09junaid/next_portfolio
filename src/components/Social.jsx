@@ -5,23 +5,13 @@ import {FaGithub, FaLinkedinIn, FaYoutube, FaTwitter} from 'react-icons/fa'
 const socials=[
   {
     icon:<FaGithub/>,
-    path:"https://github.com/junaid-dev",
+    path:"https://github.com/09junaid",
     label:"Github",
   },
   {
     icon:<FaLinkedinIn/>,
-    path:"https://www.linkedin.com/in/junaid-dev/",
+    path:"https://www.linkedin.com/in/junaid-arshad02/",
     label:"Linkedin",
-  },
-  {
-    icon:<FaTwitter/>,
-    path:"https://twitter.com/junaid_dev",
-    label:"Twitter",
-  },
-  {
-    icon:<FaYoutube/>,
-    path:"https://www.youtube.com/@junaiddev",
-    label:"Youtube",
   },
 ]
 export default function Social({containerStyles,iconStyles}) {
