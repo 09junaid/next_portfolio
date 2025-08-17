@@ -1,12 +1,11 @@
-import { FaHtml5, FaCss3, FaBootstrap, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiMui, SiShadcnui, SiTypescript, SiNextdotjs, SiExpress, SiNestjs, SiPostgresql,SiMongodb,SiRedux } from "react-icons/si";
+import { FaHtml5, FaCss3, FaBootstrap, FaJs, FaReact, FaNodeJs, FaServer } from "react-icons/fa";
+import { SiTailwindcss, SiMui, SiShadcnui, SiTypescript, SiNextdotjs, SiExpress, SiNestjs,SiRedux,SiPrisma ,SiTypeorm ,SiReactquery } from "react-icons/si";
 
 import {FaPhoneAlt,FaEnvelope,FaMapMarkerAlt} from "react-icons/fa"
 import badge from "../../public/assets/resume/badge.svg";
 import cap from "../../public/assets/resume/cap.svg";
 import thumb1 from "../../public/assets/work/thumb1.png";
 import thumb2 from "../../public/assets/work/thumb2.png";
-import thumb3 from "../../public/assets/work/thumb3.png";
 
 // about data in resume
 export const about={
@@ -147,6 +146,10 @@ export const skills = {
       name: "Redux Toolkit",
     },
     {
+      icon: <SiReactquery />,
+      name: "React Query",
+    },
+    {
       icon: <FaNodeJs />,
       name: "Node.js",
     },
@@ -159,12 +162,16 @@ export const skills = {
       name: "Nest.js",
     },
     {
-      icon: <SiMongodb />,
-      name: "MongoDB",
+      icon: <SiPrisma  />,
+      name: "Prisma",
     },
     {
-      icon: <SiPostgresql />,
-      name: "PostgreSQL",
+      icon: <SiTypeorm  />,
+      name: "TypeORM",
+    },
+    {
+      icon: <FaServer />,
+      name: "Database",
     },
   ],
 };

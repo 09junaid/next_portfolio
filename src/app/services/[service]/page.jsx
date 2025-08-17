@@ -39,6 +39,9 @@ import {
   SiGraphql,
   SiSocketdotio,
   SiApachekafka,
+  SiPrisma,
+  SiTypeorm,
+  SiMongoose
 } from "react-icons/si";
 import { RiNextjsFill, RiSupabaseFill } from "react-icons/ri";
 import { FaGitAlt } from "react-icons/fa6";
@@ -207,6 +210,26 @@ const serviceConfig = {
         ],
       },
       {
+        category: "ORMs & Data Access",
+        technologies: [
+          {
+            name: "Prisma",
+            icon: <SiPrisma />,
+            description: "ORM for databases",
+          },
+          {
+            name: "TypeORM",
+            icon: <SiTypeorm />,
+            description: "ORM for databases",
+          },
+          {
+            name: "Mongoose",
+            icon: <SiMongoose />,
+            description: "ORM for MongoDB",
+          },
+        ],
+      },
+      {
         category: "API & Communication",
         technologies: [
           {
@@ -263,138 +286,128 @@ const serviceConfig = {
     ],
   },
   fullstack: {
-    title: "Full Stack Development",
-    description:
-      "End-to-end web development from frontend to backend, creating complete web applications.",
-    technologies: [
-      {
-        category: "Frontend",
-        technologies: [
-          {
-            name: "React",
-            icon: <FaReact />,
-            description: "Modern UI components",
-          },
-          {
-            name: "HTML/CSS",
-            icon: <FaHtml5 />,
-            description: "Structure and styling",
-          },
-          {
-            name: "JavaScript",
-            icon: <FaJs />,
-            description: "Interactive functionality",
-          },
-          {
-            name: "TypeScript",
-            icon: <SiTypescript />,
-            description: "Static typing",
-          },
-          {
-            name: "Next.js",
-            icon: <RiNextjsFill />,
-            description: "Full-stack React framework",
-          },
-        ],
-      },
-      {
-        category: "Styling & UI Tools",
-        technologies: [
-          {
-            name: "Bootstrap",
-            icon: <FaBootstrap />,
-            description: "Responsive UI components",
-          },
-          {
-            name: "Tailwind CSS",
-            icon: <SiTailwindcss />,
-            description: "Utility-first CSS framework",
-          },
-          {
-            name: "MUI",
-            icon: <SiMui />,
-            description: "Material-UI component library",
-          },
-          {
-            name: "Shadcn UI",
-            icon: <SiShadcnui />,
-            description: "UI component library",
-          },
-        ],
-      },
-      {
-        category: "Backend",
-        technologies: [
-          {
-            name: "Node.js",
-            icon: <FaNodeJs />,
-            description: "Server-side runtime",
-          },
-          {
-            name: "Express",
-            icon: <SiExpress />,
-            description: "API framework",
-          },
-          {
-            name: "Nest.js",
-            icon: <SiNestjs />,
-            description: "Progressive Node.js framework",
-          },
-          {
-            name: "Databases",
-            icon: <FaDatabase />,
-            description: "Data storage solutions",
-          },
-        ],
-      },
-      {
-        category: "API & Testing Tools",
-        technologies: [
-          {
-            name: "Swagger",
-            icon: <SiSwagger />,
-            description: "API documentation",
-          },
-          { name: "Postman", icon: <SiPostman />, description: "API testing" },
-          {
-            name: "Testing",
-            icon: <SiJest />,
-            description: "Quality assurance",
-          },
-        ],
-      },
-      {
-        category: "DevOps",
-        technologies: [
-          { name: "Git", icon: <FaGitAlt />, description: "Version control" },
-          { name: "GitHub", icon: <FaGithub />, description: "Source control" },
-          {
-            name: "Deployment",
-            icon: <FaServer />,
-            description: "Cloud hosting",
-          },
-        ],
-      },
-      {
-        category: "Editors",
-        technologies: [
-          { name: "VsCode", icon: <VscVscode />, description: "Code editor" },
-          {
-            name: "Sublime Text",
-            icon: <SiSublimetext />,
-            description: "Code editor",
-          },
-          { name: "Webstorm", icon: <SiWebstorm />, description: "IDE" },
-        ],
-      },
-    ],
-    deliverables: [
-      "Complete web applications",
-      "Database integration",
-      "User authentication",
-      "Deployment & hosting",
-    ],
-  },
+  title: "Full Stack Development",
+  description:
+    "End-to-end web development from frontend to backend, creating complete web applications.",
+  technologies: [
+    // === Frontend Core ===
+    {
+      category: "Core Frontend Technologies",
+      technologies: [
+        { name: "HTML5", icon: <FaHtml5 />, description: "Semantic markup and structure" },
+        { name: "CSS3", icon: <FaCss3 />, description: "Styling and animations" },
+        { name: "JavaScript", icon: <FaJs />, description: "Dynamic functionality" },
+        { name: "TypeScript", icon: <SiTypescript />, description: "Static typing" },
+      ],
+    },
+    {
+      category: "Styling & UI Tools",
+      technologies: [
+        { name: "Bootstrap", icon: <FaBootstrap />, description: "Responsive UI components" },
+        { name: "Tailwind CSS", icon: <SiTailwindcss />, description: "Utility-first CSS framework" },
+        { name: "MUI", icon: <SiMui />, description: "Material-UI component library" },
+        { name: "Shadcn UI", icon: <SiShadcnui />, description: "UI component library" },
+      ],
+    },
+    {
+      category: "Frontend Frameworks & Libraries",
+      technologies: [
+        { name: "React", icon: <FaReact />, description: "Component-based UI library" },
+        { name: "Next.js", icon: <RiNextjsFill />, description: "Full-stack React framework" },
+      ],
+    },
+    {
+      category: "State Management & Data Fetching",
+      technologies: [
+        { name: "Redux Toolkit", icon: <SiRedux />, description: "State management library" },
+        { name: "RTK Query", icon: <TbBrandRedux />, description: "Data fetching library" },
+        { name: "React Query", icon: <SiReactquery />, description: "Data fetching library" },
+        { name: "Axios", icon: <SiAxios />, description: "HTTP requests library" },
+      ],
+    },
+
+    // === Backend Core ===
+    {
+      category: "Server Technologies",
+      technologies: [
+        { name: "Node.js", icon: <FaNodeJs />, description: "JavaScript runtime environment" },
+        { name: "Express.js", icon: <SiExpress />, description: "Web application framework" },
+        { name: "Nest.js", icon: <SiNestjs />, description: "Progressive Node.js framework" },
+        { name: "Python", icon: <FaPython />, description: "Backend development" },
+      ],
+    },
+    {
+      category: "Databases",
+      technologies: [
+        { name: "MongoDB", icon: <SiMongodb />, description: "NoSQL document database" },
+        { name: "PostgreSQL", icon: <SiPostgresql />, description: "Relational database" },
+        { name: "MySQL", icon: <GrMysql />, description: "Reliable relational database" },
+        { name: "Supabase", icon: <RiSupabaseFill />, description: "Cloud-hosted database" },
+      ],
+    },
+    {
+      category: "ORMs & Data Access",
+      technologies: [
+        { name: "Prisma", icon: <SiPrisma />, description: "ORM for databases" },
+        { name: "TypeORM", icon: <SiTypeorm />, description: "ORM for databases" },
+        { name: "Mongoose", icon: <SiMongoose />, description: "ODM for MongoDB" },
+      ],
+    },
+    {
+      category: "API & Communication",
+      technologies: [
+        { name: "REST API", icon: <FaServer />, description: "Standardized API architecture" },
+        { name: "GraphQL", icon: <SiGraphql />, description: "Flexible API query language" },
+        { name: "WebSockets", icon: <SiSocketdotio />, description: "Real-time communication" },
+      ],
+    },
+    {
+      category: "Infrastructure & Scaling",
+      technologies: [
+        { name: "Docker", icon: <FaDocker />, description: "Containerization & deployment" },
+        { name: "Redis", icon: <DiRedis />, description: "In-memory caching & pub/sub" },
+        { name: "Microservices", icon: <FaMicrochip />, description: "Distributed backend architecture" },
+        { name: "Message Queues", icon: <SiApachekafka />, description: "Async task processing (RabbitMQ, Kafka)" },
+      ],
+    },
+
+    // === Common Tools ===
+    {
+      category: "API & Testing Tools",
+      technologies: [
+        { name: "Swagger", icon: <SiSwagger />, description: "API documentation" },
+        { name: "Postman", icon: <SiPostman />, description: "API testing" },
+        { name: "Jest", icon: <SiJest />, description: "Unit testing framework" },
+      ],
+    },
+    {
+      category: "DevOps & Version Control",
+      technologies: [
+        { name: "Git", icon: <FaGitAlt />, description: "Version control" },
+        { name: "GitHub", icon: <FaGithub />, description: "Source control" },
+        { name: "Deployment", icon: <FaServer />, description: "Cloud hosting & CI/CD" },
+      ],
+    },
+    {
+      category: "Editors & IDEs",
+      technologies: [
+        { name: "VS Code", icon: <VscVscode />, description: "Code editor" },
+        { name: "Sublime Text", icon: <SiSublimetext />, description: "Code editor" },
+        { name: "WebStorm", icon: <SiWebstorm />, description: "IDE for JavaScript/TypeScript" },
+      ],
+    },
+  ],
+  deliverables: [
+    "Complete end-to-end web applications",
+    "Frontend and backend integration",
+    "Database design and optimization",
+    "User authentication and authorization",
+    "Real-time features (WebSockets)",
+    "Cloud deployment & containerization",
+    "Performance optimization",
+  ],
+},
+
 };
 
 export default function ServicePage() {
