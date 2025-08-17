@@ -1,5 +1,5 @@
 import { FaHtml5, FaCss3, FaBootstrap, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiMui, SiShadcnui, SiTypescript, SiNextdotjs, SiExpress, SiNestjs, SiPostgresql,SiMongodb } from "react-icons/si";
+import { SiTailwindcss, SiMui, SiShadcnui, SiTypescript, SiNextdotjs, SiExpress, SiNestjs, SiPostgresql,SiMongodb,SiRedux } from "react-icons/si";
 
 import {FaPhoneAlt,FaEnvelope,FaMapMarkerAlt} from "react-icons/fa"
 import badge from "../../public/assets/resume/badge.svg";
@@ -26,7 +26,7 @@ export const about={
     fieldValue:"2 Years",
     },
     {
-    fieldName:"Skype",
+    fieldName:"LinkedIn",
     fieldValue:"Junaid Arshad",
     },
     {
@@ -143,6 +143,10 @@ export const skills = {
       name: "Next.js",
     },
     {
+      icon: <SiRedux />,
+      name: "Redux Toolkit",
+    },
+    {
       icon: <FaNodeJs />,
       name: "Node.js",
     },
@@ -192,7 +196,7 @@ export const projectData=[
     ],
     image:thumb1,
     live:'https://novatalk.netlify.app/',
-    github:'',
+    github:'https://github.com/09junaid',
   },
   {
     num:'02',
@@ -216,28 +220,7 @@ export const projectData=[
     ],
     image:thumb2,
     live:'https://hypehive.vercel.app/',
-    github:'',
-  },
-  {
-    num:'03',
-    category:'Full Stack Development',
-    title:'project 1',
-    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
-    stack:[
-      {
-        name:'HTML 5',
-      },
-      {
-        name:'CSS 3',
-      },
-      {
-        name:'JavaScrip',
-      },
-
-    ],
-    image:thumb3,
-    live:'',
-    github:'',
+    github:'https://github.com/09junaid/full-ecommerce',
   },
 ]
 

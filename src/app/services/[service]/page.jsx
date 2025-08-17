@@ -14,6 +14,8 @@ import {
   FaServer,
   FaPython,
   FaGithub,
+  FaDocker,
+  FaMicrochip,
 } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 
@@ -22,6 +24,9 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiShadcnui,
+  SiRedux,
+  SiReactquery,
+  SiAxios,
   SiExpress,
   SiNestjs,
   SiMongodb,
@@ -31,10 +36,15 @@ import {
   SiJest,
   SiWebstorm,
   SiSublimetext,
+  SiGraphql,
+  SiSocketdotio,
+  SiApachekafka,
 } from "react-icons/si";
 import { RiNextjsFill, RiSupabaseFill } from "react-icons/ri";
 import { FaGitAlt } from "react-icons/fa6";
 import { VscVscode } from "react-icons/vsc";
+import { TbBrandRedux } from "react-icons/tb";
+import { DiRedis } from "react-icons/di";
 
 // Simple service data configuration
 const serviceConfig = {
@@ -108,7 +118,31 @@ const serviceConfig = {
           },
         ],
       },
-      
+      {
+        category: "State Management and Data Fetching Libraries",
+        technologies: [
+          {
+            name: "Redux Toolkit",
+            icon: <SiRedux />,
+            description: "State management library",
+          },
+          {
+            name: "RTK Query",
+            icon: <TbBrandRedux />,
+            description: "Data fetching library",
+          },
+          {
+            name: "React Query",
+            icon: <SiReactquery />,
+            description: "Data fetching library",
+          },
+          {
+            name: "Axios",
+            icon: <SiAxios />,
+            description: "HTTP requests library",
+          },
+        ],
+      },
     ],
     deliverables: [
       "Responsive web applications",
@@ -172,12 +206,60 @@ const serviceConfig = {
           },
         ],
       },
+      {
+        category: "API & Communication",
+        technologies: [
+          {
+            name: "REST API",
+            icon: <FaServer />,
+            description: "Standardized API architecture",
+          },
+          {
+            name: "GraphQL",
+            icon: <SiGraphql />,
+            description: "Flexible API query language",
+          },
+          {
+            name: "WebSockets",
+            icon: <SiSocketdotio />,
+            description: "Real-time communication",
+          },
+        ],
+      },
+      {
+        category: "Infrastructure & Scaling",
+        technologies: [
+          {
+            name: "Docker",
+            icon: <FaDocker />,
+            description: "Containerization & deployment",
+          },
+          {
+            name: "Redis",
+            icon: <DiRedis />,
+            description: "In-memory caching & pub/sub",
+          },
+          {
+            name: "Microservices",
+            icon: <FaMicrochip />,
+            description: "Distributed backend architecture",
+          },
+          {
+            name: "Message Queues",
+            icon: <SiApachekafka />,
+            description: "Async task processing (RabbitMQ, Kafka)",
+          },
+        ],
+      },
     ],
     deliverables: [
-      "RESTful APIs",
-      "Database design",
-      "Authentication systems",
-      "Cloud deployment",
+      "RESTful & GraphQL APIs",
+      "Database design & optimization",
+      "Authentication & authorization systems",
+      "Real-time communication (WebSockets)",
+      "Microservices architecture",
+      "Caching & performance optimization",
+      "Cloud deployment & containerization",
     ],
   },
   fullstack: {
@@ -216,7 +298,7 @@ const serviceConfig = {
         ],
       },
       {
-        category: "Styling & UI Tools", // 👈 new heading
+        category: "Styling & UI Tools",
         technologies: [
           {
             name: "Bootstrap",
@@ -248,7 +330,11 @@ const serviceConfig = {
             icon: <FaNodeJs />,
             description: "Server-side runtime",
           },
-          { name: "Express", icon: <SiExpress />, description: "API framework" },
+          {
+            name: "Express",
+            icon: <SiExpress />,
+            description: "API framework",
+          },
           {
             name: "Nest.js",
             icon: <SiNestjs />,
@@ -262,7 +348,7 @@ const serviceConfig = {
         ],
       },
       {
-        category: "API & Testing Tools", // 👈 new heading
+        category: "API & Testing Tools",
         technologies: [
           {
             name: "Swagger",
