@@ -44,11 +44,9 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID; 
-    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID; 
+    const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
     const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
-
-    // Prepare template parameters - make sure these match your EmailJS template variables
     const templateParams = {
       from_name: `${formData.firstname} ${formData.lastname}`,
       from_email: formData.email,
@@ -66,24 +64,25 @@ export default function Contact() {
       .send(serviceId, templateId, templateParams, publicKey)
       .then(
         () => {
-          // Success toast
-          toast.success("Message sent successfully! I'll get back to you soon.", {
-            duration: 5000,
-            position: "top-center",
-            style: {
-              background: "#00ff99",
-              color: "#1c1c22",
-              fontWeight: "600",
-              borderRadius: "12px",
-              padding: "16px 20px",
-            },
-            iconTheme: {
-              primary: "#1c1c22",
-              secondary: "#00ff99",
-            },
-          });
-          
-          // Reset form
+          toast.success(
+            "Message sent successfully! I'll get back to you soon.",
+            {
+              duration: 5000,
+              position: "top-center",
+              style: {
+                background: "#00ff99",
+                color: "#1c1c22",
+                fontWeight: "600",
+                borderRadius: "12px",
+                padding: "16px 20px",
+              },
+              iconTheme: {
+                primary: "#1c1c22",
+                secondary: "#00ff99",
+              },
+            }
+          );
+
           setFormData({
             firstname: "",
             lastname: "",
@@ -120,7 +119,7 @@ export default function Contact() {
   return (
     <>
       <Toaster />
-      
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
@@ -142,8 +141,8 @@ export default function Contact() {
                     Let's work together
                   </h3>
                   <p className="text-white/60 text-sm sm:text-base">
-                    Have a project in mind? Fill the form and I'll get back to you
-                    as soon as possible.
+                    Have a project in mind? Fill the form and I'll get back to
+                    you as soon as possible.
                   </p>
                 </div>
 
@@ -198,14 +197,17 @@ export default function Contact() {
                   <SelectContent>
                     <SelectGroup>
                       <SelectLabel>Select a service</SelectLabel>
-                      <SelectItem value="Web Development">
-                        Web Development
+                      <SelectItem value="Frontend Development">
+                        Frontend Development
                       </SelectItem>
-                      <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
-                      <SelectItem value="Logo Design">Logo Design</SelectItem>
                       <SelectItem value="Backend Development">
                         Backend Development
                       </SelectItem>
+                      <SelectItem value="Full Stack Development">
+                        Full Stack Development
+                      </SelectItem>
+                      <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
+                      <SelectItem value="Logo Design">Logo Design</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>
@@ -256,10 +258,14 @@ export default function Contact() {
                     className="flex items-center gap-4 sm:gap-6 bg-[#1e1e24] border border-gray-800 p-3 sm:p-4 rounded-xl hover:bg-[#27272c] transition-all duration-300"
                   >
                     <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-[60px] md:h-[60px] lg:w-[72px] lg:h-[72px] bg-accent/10 text-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                      <div className="text-xl sm:text-2xl md:text-[28px]">{item.icon}</div>
+                      <div className="text-xl sm:text-2xl md:text-[28px]">
+                        {item.icon}
+                      </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-white/60 text-sm sm:text-base">{item.title}</p>
+                      <p className="text-white/60 text-sm sm:text-base">
+                        {item.title}
+                      </p>
                       <h3 className="text-base sm:text-lg font-semibold truncate">
                         {item.description}
                       </h3>
